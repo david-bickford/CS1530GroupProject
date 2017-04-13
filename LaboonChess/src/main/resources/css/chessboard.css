@@ -1,0 +1,105 @@
+/*
+    This CSS file is used to avoid the redundant code-copying of the
+    border width, border style, border color, and background color
+    for the chessboard GUI.
+
+    This is also used for the "flipping" or "rotating" action that
+    occurs with the chessboard when the user wants the white and
+    black pieces to flip around.
+*/
+
+
+
+
+/*
+    Chessboard square coloring
+*/
+.black {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #666, #888);
+}
+.white {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #eee, #ddd);
+}
+.deadpoolblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #a7a7a7, #e2e2e2);
+}
+.deadpoolwhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #f6f6f6, #d9d9d9);
+}
+.electionblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #f59e8e, #f9c6bd);
+}
+.electionwhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #d4e9f3, #b5d9eb);
+}
+.hulkblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #590059, #800080);
+}
+.hulkwhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #058d05, #047504);
+}
+.ironmanblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #771414, #881717);
+}
+.ironmanwhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #b1e1fc, #8bd3fb);
+}
+.pittblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #697fcf, #8698d8);
+}
+.pittwhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #eee6d2, #e8dfc4);
+}
+.wolverineblack {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #c3e3f2, #d3ebf6);
+}
+.wolverinewhite {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #d96b6b, #e18b8b);
+}
+/*
+    This puts a border around the chessboard.
+    (ABCDEFGH and 12345678 coordinates)
+
+    Each Pane around the chessboard is given a
+    border on the side that faces the chessboard,
+    giving an outline.
+*/
+.leftCoord {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: #999;
+}
+.leftCoord.flipped {
+    -fx-border-width: 0 0 0 1;
+}
+
+.rightCoord {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 1;
+    -fx-border-style: solid;
+    -fx-border-color: #999;
+}
+.rightCoord.flipped {
+    -fx-border-width: 0 1 0 0;
+}
+
+.topCoord {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+    -fx-border-color: #999;
+}
+.topCoord.flipped {
+    -fx-border-width: 1 0 0 0;
+}
+
+.bottomCoord {
+    -fx-background-color: transparent;
+    -fx-border-width: 1 0 0 0;
+    -fx-border-style: solid;
+    -fx-border-color: #999;
+}
+.bottomCoord.flipped {
+    -fx-border-width: 0 0 1 0;
+}
